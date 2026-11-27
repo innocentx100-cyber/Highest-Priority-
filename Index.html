@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Highest Priority VPN</title>
+<style>
+body{background:#0a0a0a;color:white;font-family:Arial;text-align:center;padding:20px}
+h1{color:#00ff88}
+.box{background:#1a1a1a;padding:20px;border-radius:15px;max-width:400px;margin:auto}
+select,button{width:100%;padding:15px;margin:10px 0;border-radius:10px;border:none;font-size:16px}
+button{background:#00ff88;color:black;font-weight:bold}
+.status{margin-top:15px;padding:10px;background:#222;border-radius:10px}
+.vip{background:gold;color:black;padding:15px;border-radius:10px;margin-top:15px;font-weight:bold}
+</style>
+</head>
+<body>
+<h1>⚡ HIGHEST PRIORITY VPN</h1>
+<p>Fast • Free • SA Networks</p>
+<div class="box">
+<label>Choose Your Network:</label>
+<select id="network">
+<option value="MTN">MTN South Africa</option>
+<option value="Vodacom">Vodacom</option>
+<option value="Telkom">Telkom</option>
+<option value="Cell C">Cell C</option>
+<option value="Rain">Rain</option>
+</select>
+<label>Choose Server:</label>
+<select id="server">
+<option>SA Server 1 - Fast</option>
+<option>SA Server 2 - Fast</option>
+<option>SA Server 3 - Stable</option>
+</select>
+<button onclick="connect()">CONNECT</button>
+<div class="status" id="status">Status: Disconnected</div>
+<div class="vip" onclick="buyVip()">👑 GET VIP - R30 / MONTH<br><small>Tap to buy on WhatsApp</small></div>
+</div>
+<script>
+function connect(){
+  let net = document.getElementById('network').value;
+  let status = document.getElementById('status');
+  status.innerHTML = "Connecting to " + net + "... Please wait...";
+  setTimeout(()=>{
+    status.innerHTML = "✅ Connected to " + net + " - SA Server 1<br>Speed: Fast | Ping: 32ms";
+  }, 2000);
+}
+function buyVip(){
+  window.open("https://wa.me/27600000000?text=I want VIP Highest Priority VPN R30", "_blank");
+}
+</script>
+</body>
+</html>
